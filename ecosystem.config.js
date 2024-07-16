@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   apps: [
     {
       name: "strapi",
@@ -23,9 +23,7 @@ export default {
       "pre-deploy": "git fetch --all",
       "post-deploy":
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      // env: {
-      //   NODE_ENV: "production",
-      // },
+      "pre-setup": "",
     },
   },
 };
